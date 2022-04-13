@@ -1,0 +1,144 @@
+@font-face {
+    font-family: Gummy;
+    src: url(../assets/fonts/Gummy.ttf);
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    overflow-y: hidden;
+    background-image: url("../assets/images/Recurso\ 1.png");
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-size: 120%;
+    /* background: #2c3e50; */
+    animation: anim 10s linear infinite;
+}
+
+#controlers {
+    /* width: 540px; */
+    /* height: 100vh; */
+    margin: 20px auto;
+    /* background: #2c3e50; */
+    align-items: center;
+    position: relative;
+}
+
+#controlers a {
+    /* display: block; */
+    width: 385px;
+    height: 174px;
+    position: fixed;
+}
+
+#one {
+    background: url(../assets/images/players/controls/controlp1.png);
+    left: 300px;
+    top: 250px;
+    /* right: 300px; */
+}
+
+#two {
+    background: url(../assets/images/players/controls/controlp2.png);
+    left: 300px;
+    top: 250px;
+
+}
+
+#three {
+    background: url(../assets/images/players/controls/controlp3.png);
+    left: 300px;
+    top: 250px;
+
+}
+
+#four {
+    background: url(../assets/images/players/controls/controlp4.png);
+    left: 300px;
+    top: 250px;
+
+}
+
+#controlers a span {
+    position: absolute;
+}
+
+#one span {
+    bottom: 50px;
+    left: 400px
+}
+
+#two span {
+    bottom: 50px;
+    left: 600px
+}
+
+#three span {
+    /* bottom: -20px; */
+    margin-top: 120px;
+
+    left: 400px
+}
+
+#four span {
+    /* bottom: 0px; */
+    margin-top: 120px;
+    left: 600px
+}
+
+#controlers a:hover {
+    z-index: 1;
+}
+#controlers a:hover span{
+    border-bottom-color: chartreuse;
+}
+
+@keyframes anim {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: -100px -230px;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.controls-title {
+    margin-top: 8vh;
+    margin-right:150px;
+    font-family: Gummy;
+    font-size: 5vw;
+    color: rgb(255, 255, 255);
+    text-shadow: -1px -1px black, 1px 1px rgb(0, 0, 0);
+    animation-name: fontGrowth;
+    animation-duration: 1s;
+    margin-bottom: 4vh;
+    text-align: center;
+}
+.back-btn{
+    font-family: Gummy;
+    /* text-align: center; */
+    display: inline-block;
+    margin: 5px;
+    margin-left: 20px;
+    margin-top: 20px;
+    padding: 10px 10px 10px 10px;
+    background-color: rgb(196, 196, 196);
+    text-shadow: -1px -1px black, 1px 1px rgb(0, 0, 0);
+    color: #7BAF3F;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -o-border-radius: 7px;
+    border-radius: 7px;
+    box-shadow: 0 .2em rgb(85, 85, 85);
+    cursor: pointer;
+    font-size: 2vw;
+}

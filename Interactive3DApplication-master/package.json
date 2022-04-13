@@ -1,0 +1,21 @@
+{
+  "name": "class1",
+  "version": "1.0.0",
+  "description": "Descrestando noobsters",
+  "main": "index.js",
+  "dependencies": {
+    "three": "^0.101.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test",
+    "aDarle": "browser-sync start --server --files--files \"*/*\""
+  },
+  "keywords": [
+    "hacking",
+    "hacker",
+    "hacks"
+  ],
+  "author": "Pabhoz",
+  "license": "MIT"
+}

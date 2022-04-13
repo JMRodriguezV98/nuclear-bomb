@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="../three.js-master/build/three.min.js"></script>
+    <script src="src/loaders/OBJLoader.js"></script>
+    <script src="../libs/OrbitControls.js"></script>
+    <script src="../libs/Pabhoz/Utilities.js"></script>
+    <script src="src/models/Sound.js"></script>
+    <script src="src/models/Control.js"></script>
+    <script src="src/models/CollidableBox.js"></script>
+    <script src="src/models/Player.js"></script>
+    <script src="src/models/Loaders.js"></script>
+    <script src="../libs/Stats.js"></script>
+    <script src="src/models/Bomb.js"></script>
+    
+
+    
+</head>
+<body>
+<!-- <body onload="webGLStart()"> -->
+    
+    <!-- GUI -->
+    <div id="options">
+        Salir
+    </div>
+    <!-- END GUI -->
+    
+
+    <div id="home">
+
+            <audio id="audioback" autoplay>
+                    <source src="./assets/songs/BackGroundInicio.ogg" type="audio/ogg">
+                    
+              </audio>
+
+           <audio id="audioGame" loop>
+
+                <source src="./assets/songs/Bomber.mp3" type="audio/mp3">
+           </audio>   
+           
+
+        <!-- <div class="title">Nuclear Bombers</div> -->
+        <img class="title" src="assets/images/Recurso 2.png" height="270px" width="1100">
+        <!--<div class="start-btn" onclick="gameStart()" >Comenzar juego</div>-->
+    <audio id="audiotag1" src="./assets/songs/Select.wav" preload="auto"></audio>
+    <a href="javascript:play_single_sound();" class="start-btn" onclick="gameStart()">Comenzar Juego</a>
+    <script type="text/javascript">
+	    function play_single_sound() {
+		document.getElementById('audiotag1').play();
+		document.getElementById('audioback').pause();
+		document.getElementById('audioGame').play();
+
+        
+// <!-- <div class="title">NUCLEAR BOMBERS</div> -->
+//         <img class="title" src="assets/images/Recurso 2.png" height="270px" width="1100">
+
+//         <div class="start-btn" onclick="gameStart()">Comenzar juego</div>
+//         <a href="controlScreen/controls.html">
+//             <div class="controls-btn" onclick="">Controles</div>
+//         </a>
+        
+	    }
+    </script>
+
+    <a href="controlScreen/controls.html">
+    <div class="controls-btn" onclick="">Controles</div>
+    </a>
+    </div>
+    <div id="app">
+        <canvas id="appCanvas" width="100%" height="100%"></canvas>
+        <div class="reloj" id="minutos">0</div>
+        <div class="reloj" id="segundos">0</div>
+        
+    </div>
+
+    <script>
+        window.onload = () => {
+            
+            let options = document.querySelector("#options");
+            
+            options.onclick = () => {
+                showHideGame();
+                document.getElementById('audiotag1').play();
+                document.getElementById('audioGame').pause();
+                document.getElementById('audioback').play();
+                
+
+            }
+           
+        }
+        
+        
+        function gameStart() {
+            showHideGame();
+            webGLStart();
+        }
+       
+        function showHideGame() {
+            let home = document.querySelector("#home");
+            if (home.style.display != "flex") {
+                if (home.style.display == "") {
+                    home.style.display = "none";
+                }else{
+                    home.style.display = "flex";
+                }
+            }
+            let app = document.querySelector("#app");
+            app.style.display = (app.style.display != "block") ? "block" : "none";
+            let options = document.querySelector("#options");
+            options.style.display = (options.style.display != "block") ? "block" : "none";
+        }
+    </script>
+  
+    <script src="src/app.js"></script>
+</body>
+</html>
+<!-- npm init -->
